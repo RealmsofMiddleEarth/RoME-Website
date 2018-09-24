@@ -22,7 +22,7 @@ class Head implements iDisplayable {
 
     public function add_css_file($filename, $include_static=TRUE) {
         if ($include_static === TRUE) {
-            array_push($this->css_files, "/static/css/$filename");
+            array_push($this->css_files, "/static/css/$filename.css");
         }
         else {
             array_push($this->css_files, $filename);
@@ -31,7 +31,7 @@ class Head implements iDisplayable {
 
     public function add_js_file($filename, $include_static=TRUE) {
         if ($include_static === TRUE) {
-            array_push($this->js_files, "/static/js/$filename");
+            array_push($this->js_files, "/static/js/$filename.js");
         }
         else {
             array_push($this->js_files, $filename);
@@ -62,7 +62,7 @@ HEAD_A;
         foreach ($this->js_files as $filepath) {
             $c .= "\t<script src=\"$filepath\"></script>\n";
         }
-        return $a . $b . $c . "</head>\n<body>\n";
+        return $a . $b . $c . "</head>\n<body>\n\n";
     }
 }
 

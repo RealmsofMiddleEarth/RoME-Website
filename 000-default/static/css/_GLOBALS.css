@@ -1,8 +1,16 @@
 :root {
-    --navbar-background-color: #647A36;
-    --navbar-text-color: white;
+    --navbar-background-color: 101, 109, 15;
+    --navbar-text-color: 255, 255, 255;
 }
 
 * {
     font-family: "Cinzel", sans-serif;
+}
+
+body {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url(/static/images/background.png) no-repeat center center fixed;
+    background-size: cover;
 }

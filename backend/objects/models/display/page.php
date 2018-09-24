@@ -1,15 +1,15 @@
 <?php
 
 
-include $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/_BASE.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/head.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/body.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/_BASE.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/head.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/body.php";
 
 
 class Page implements iDisplayable {
 
-    private $head;
-    private $body;
+    public $head;
+    public $body;
 
     public function __construct() {
         $this->head = new Head();
