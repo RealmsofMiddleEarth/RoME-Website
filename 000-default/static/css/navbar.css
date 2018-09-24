@@ -16,7 +16,7 @@ h1.branding {
     font-size: 2rem;
 }
 
-h1.branding span {
+.branding span {
     background: rgb(var(--navbar-background-color));
     padding: 5px;
     /* box-shadow: -5px -10px rgba(136, 136, 136, 0.2); */
@@ -56,6 +56,11 @@ nav.navbar * {
         width: 100%;
         justify-content: center;
         text-align: center;
+    }
+
+    .branding span {
+        width: 100%;
+        border-radius: 0;
     }
 
     nav.navbar {

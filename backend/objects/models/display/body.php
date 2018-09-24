@@ -1,13 +1,10 @@
 <?php
 
 
-include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/jumbotron.php";
-
-
 class Body implements iDisplayable {
 
     private $jumbotron;
-    private $rows = array();
+    private $containers = array();
     private $raw_html;
 
     public function __construct() {
@@ -18,8 +15,8 @@ class Body implements iDisplayable {
         $this->jumbotron = $jumbotron;
     }
 
-    public function add_row($row) {
-        array_push($this->rows, $row);
+    public function add_container($container) {
+        array_push($this->containers, $container);
     }
 
     public function set_raw_html($text) {
@@ -36,11 +33,11 @@ class Body implements iDisplayable {
             $b = $this->raw_html;
         }
         else {
-            foreach($this->rows as $row) {
-                $b .= $row->get_output() . "\n";
+            foreach($this->containers as $container) {
+                $b .= $container->get_output() . "\n";
             }
         }
-        return $a . "<div class=\"content\">\n" . $b . "</div>";
+        return $a . $b;
     }
 }
 

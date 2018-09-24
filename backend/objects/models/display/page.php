@@ -1,11 +1,6 @@
 <?php
 
 
-include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/_BASE.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/head.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/models/display/body.php";
-
-
 class Page implements iDisplayable {
 
     public $head;
@@ -34,8 +29,8 @@ class Page implements iDisplayable {
         $this->body->set_jumbotron($jumbotron);
     }
 
-    public function add_row($row) {
-        $this->body->add_row($row);
+    public function add_container($containter) {
+        $this->body->add_container($containter);
     }
 
     // Standard get_output that goes through everything

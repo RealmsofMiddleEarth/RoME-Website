@@ -1,12 +1,13 @@
 <?php
 
 
-class Jumbotron implements iDisplayable {
+class Jumbotron implements iClassable {
 
     private $raw_html;
     private $heading = "";
     private $subheading = "";
     private $headertext = "";
+    private $classes = array();
     
     private $navbar = <<<NAVBAR
 <div class="branding"></div>
@@ -30,6 +31,10 @@ class Jumbotron implements iDisplayable {
     </div>
 </nav>\n
 NAVBAR;
+    
+    public function add_class($classname) {
+        array_push($this->classes, $classname);
+    }
 
     public function set_heading($text) {
         $this->heading = $text;
@@ -48,7 +53,7 @@ NAVBAR;
     }
 
     public function get_output() {
-        $a = "<div class=\"jumbotron\">\n";
+        $a = "<div class=\"jumbotron " . join($this->classes) . "\">\n";
         if (isset($this->raw_html) && !is_null($this->raw_html)) {
             $b = "\t" . $this->raw_html . "\n";
         }
