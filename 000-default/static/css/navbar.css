@@ -1,0 +1,12 @@
+nav.navbar {
+    background-color: var(--navbar-background-color);
+    color: var(--navbar-text-color);
+}
+
+nav.navbar a:hover {
+    text-decoration: underline;
+}
+
+nav.navbar * {
+    color: var(--navbar-text-color);
+}

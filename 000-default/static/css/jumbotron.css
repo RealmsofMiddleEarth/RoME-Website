@@ -1,0 +1,14 @@
+.jumbotron h1 {
+    color: #edd777;
+}
+
+.jumbotron h3,
+.jumbotron p {
+    color: white;
+}
+
+.jumbotron {
+    background: linear-gradient(rgba(0,0,0,1), rgba(204,204,204,0.5));
+    border-radius: 0;
+    text-align: center;
+}

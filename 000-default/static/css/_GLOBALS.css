@@ -1,0 +1,8 @@
+:root {
+    --navbar-background-color: #647A36;
+    --navbar-text-color: white;
+}
+
+* {
+    font-family: "Cinzel", sans-serif;
+}
