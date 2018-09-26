@@ -24,7 +24,7 @@ class Column implements iClassable {
             return "<div class=\"col-$width " . join($this->classes) . "\">" . $this->content . "</div>\n";
         }
         else {
-            return "<div class=\"col " . join($this->classes) . "\">" . $this->content . "</div>\n";
+            return "<div class=\"col " . join($this->classes) . "\">\n" . $this->content . "\n</div>\n";
         }
     }
 }

@@ -2,14 +2,20 @@
     text-align: center;
     color: white;
     margin: 20px auto 0 auto;
-    max-width: 80vw;
-    font-weight: bold;
+    max-width: 60%;
+    /* font-weight: bold; */
     text-shadow: 2px 2px 1px rgba(50, 50, 50, 0.6);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.content img {
+    width: 100%;
 }
 
 hr {
     border-top: 3px solid white;
-    width: 60%;
+    width: 100%;
     border-radius: 50%;
 }
 

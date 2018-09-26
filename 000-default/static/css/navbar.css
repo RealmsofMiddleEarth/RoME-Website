@@ -12,17 +12,24 @@ h1.branding {
     margin-top: -40px;
     margin-bottom: 0;
     margin-right: 0;
-    max-width: 120px;
+    max-width: 150px;
 }
 
-.branding img {
+.branding a {
     background: rgb(var(--navbar-background-color));
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
+    padding: 5px 20px;
 }
 
-.branding .small {
+.branding .shorttext {
+    width: 100%;
+    display: block;
+}
+
+.branding .fulltext {
+    width: 100%;
     display: none;
 }
 
@@ -57,21 +64,21 @@ nav.navbar * {
         max-width: none;
         justify-content: center;
         text-align: center;
-        padding: 10px;
     }
 
-    .branding img {
+    .branding a {
         background: rgba(var(--navbar-background-color), 0.6);
+        padding: 10px;
+        border-radius: 0;
+        padding: 15px;
     }
 
-    .branding .normal {
+    .branding .shorttext {
         display: none;
     }
     
-    .branding .small {
+    .branding .fulltext {
         display: block;
-        border-radius: 0;
-        padding: 15px;
     }
 
     nav.navbar {
