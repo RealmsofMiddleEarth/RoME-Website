@@ -1,0 +1,52 @@
+.banner {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin: 0 0 130px 0;
+    padding: 10px;
+    width: 220px;
+}
+
+.banner img {
+    border-radius: 50%;
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    border: 2px solid white;
+}
+
+.banner:after,
+.banner:before {
+    display: block;
+    content: "";
+    border: 55px solid #000;
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+}
+
+.banner:after {
+    border-color: #000 transparent transparent #000;
+    left: 0;
+}
+
+.banner:before {
+    border-color: #000 #000 transparent transparent;
+    right: 0;
+}
+
+.banner-red { background: rgba(255, 0, 0, 0.4)}
+.banner-red:after { border-color: rgba(255, 0, 0, 0.4) transparent transparent rgba(255, 0, 0, 0.4)}
+.banner-red:before { border-color: rgba(255, 0, 0, 0.4) rgba(255, 0, 0, 0.4) transparent transparent}
+
+.banner-purple { background: rgba(182, 102, 210, 0.4)}
+.banner-purple:after { border-color: rgba(182, 102, 210, 0.4) transparent transparent rgba(182, 102, 210, 0.4)}
+.banner-purple:before { border-color: rgba(182, 102, 210, 0.4) rgba(182, 102, 210, 0.4) transparent transparent}
+
+.banner-green { background: rgba(82, 158, 52, 0.4)}
+.banner-green:after { border-color: rgba(82, 158, 52, 0.4) transparent transparent rgba(82, 158, 52, 0.4)}
+.banner-green:before { border-color: rgba(82, 158, 52, 0.4) rgba(82, 158, 52, 0.4) transparent transparent}
+
+.banner-yellow { background: rgba(255, 255, 0, 0.4)}
+.banner-yellow:after { border-color: rgba(255, 255, 0, 0.4) transparent transparent rgba(255, 255, 0, 0.4)}
+.banner-yellow:before { border-color: rgba(255, 255, 0, 0.4) rgba(255, 255, 0, 0.4) transparent transparent}

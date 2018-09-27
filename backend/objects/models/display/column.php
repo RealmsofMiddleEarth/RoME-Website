@@ -21,7 +21,7 @@ class Column implements iClassable {
 
     public function get_output() {
         if (isset($this->width) && !is_null($this->width) && $this->width > 0) {
-            return "<div class=\"col-$width " . join($this->classes) . "\">" . $this->content . "</div>\n";
+            return "<div class=\"col-$this->width " . join($this->classes) . "\">" . $this->content . "</div>\n";
         }
         else {
             return "<div class=\"col " . join($this->classes) . "\">\n" . $this->content . "\n</div>\n";

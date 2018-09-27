@@ -11,7 +11,7 @@ class Head implements iDisplayable {
     );
     private $js_files = array();
     
-    public function set_title($title, $full_title=TRUE) {
+    public function set_title($title, $full_title=FALSE) {
         if ($full_title === TRUE) {
             $this->title = $title;
         }

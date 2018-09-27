@@ -12,7 +12,7 @@ class Page implements iDisplayable {
     }
 
     // The three methods to access the head
-    public function set_title($title, $full_title=TRUE) {
+    public function set_title($title, $full_title=FALSE) {
         $this->head->set_title($title, $full_title);
     }
 
