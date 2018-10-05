@@ -1,11 +1,5 @@
 .form-container {
-    /* background: rgba(162, 160, 138, 0.7); */
-    /* padding: 10px; */
     margin-bottom: 10px;
-}
-
-.form-container div {
-    margin-bottom: 5px;
 }
 
 .form-container input {
@@ -28,7 +22,8 @@ label {
 
 .form-fillout {
     background: rgba(162, 160, 138, 0.7);
-    padding: 15px;
+    padding: 20px 15px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 992px) {

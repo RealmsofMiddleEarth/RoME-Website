@@ -14,21 +14,19 @@ class Jumbotron implements iClassable {
     <img class="shorttext" src="/static/images/branding/short.png" alt="The logo for Realms of Middle Earth" />
     <img class="fulltext" src="/static/images/branding/full.png" alt="The logo for Realms of Middle Earth" />
 </a></h1>
-<span class="navbar-holder">
-    <nav class="navbar">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/lore">Lore</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/blog">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/signup">Login</a>
-            </li>
-        </ul>
-    </nav>
-</span>\n
+<nav class="navbar">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/lore">Lore</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/signup">Login</a>
+        </li>
+    </ul>
+</nav>\n
 NAVBAR;
     
     public function add_class($classname) {

@@ -11,13 +11,13 @@ if (isset($_POST['email']) && !is_null($_POST['email'])) { $email = $_POST['emai
 else { new DeathError("Email not set."); }
 
 if (isset($_POST['confirmemail']) && !is_null($_POST['confirmemail'])) { $email2 = $_POST['confirmemail']; }
-else { new DeathError("Confirmation email not set."); }
+// else { new DeathError("Confirmation email not set."); }
 
 if (isset($_POST['password']) && !is_null($_POST['password'])) { $password = $_POST['password']; }
 else { new DeathError("Password not set."); }
 
 if (isset($_POST['confirmpassword']) && !is_null($_POST['confirmpassword'])) { $password2 = $_POST['confirmpassword']; }
-else { new DeathError("Confirmation password not set."); }
+// else { new DeathError("Confirmation password not set."); }
 
 if (isset($_POST['terms']) && !is_null($_POST['terms'])) { $terms = $_POST['terms']; }
 else { new DeathError("Terms agreement not set."); }
@@ -29,12 +29,11 @@ if (isset($_POST['cookies']) && !is_null($_POST['cookies'])) { $cookies = $_POST
 else { new DeathError("Cookies agreement not set."); }
 
 
-
 // Run the checks
-if ($email != $email2) {
+if (isset($_POST['confirmemail']) && !is_null($_POST['confirmemail']) && $email != $email2) {
     new DeathError("Emails don't match.");
 }
-if ($password != $password2) {
+if (isset($_POST['confirmpassword']) && !is_null($_POST['confirmpassword']) && $password != $password2) {
     new DeathError("Passwords don't match.");
 }
 if ($terms === false) {
@@ -52,11 +51,20 @@ if ($cookies === false) {
 $database = get_database();
 $statement = $database->prepare("INSERT INTO user_logins (email, password, date_of_birth) VALUES (:email, :password, :dob);");
 try {
-    $statement->execute([
+    $params = [
         ":email" => $email,
         ":password" => password_hash($password, PASSWORD_DEFAULT),
         ":dob" => $dob
-    ]);
+    ];
+    if(!$statement->execute($params)) {
+        $error = $statement->errorInfo();
+        if (strpos($error, "PRIMARY") !== false) {
+            new DeathError("Email already exists.");
+        }
+        else {
+            new DeathError($error);
+        }
+    }
 }
 catch (PDOException $e) {
     new DeathError($e->getMessage());

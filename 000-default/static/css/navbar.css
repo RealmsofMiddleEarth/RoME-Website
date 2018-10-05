@@ -4,6 +4,7 @@
     width: 100%;
     height: 60px;
     color: rgb(var(--navbar-text-color));
+    margin-bottom: 40px;
 }
 
 .navbar a:hover {
@@ -54,16 +55,12 @@
     display: none;
 }
 
-.navbar-holder {
-    width: 100%;
-    position: inherit;
-}
-
 @media screen and (max-width: 992px) {
 
     .branding {
         margin-left: 0;
         margin-top: 0;
+        margin-bottom: 10px;
         width: 100%;
         max-width: none;
         justify-content: center;
@@ -90,6 +87,7 @@
     .navbar {
         text-align: center;
         margin-top: 0;
+        margin-bottom: 0;
         border-bottom: 0;
         background: rgba(var(--navbar-background-color), 1);
         position: fixed;

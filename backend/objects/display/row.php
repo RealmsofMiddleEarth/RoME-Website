@@ -1,7 +1,7 @@
 <?php
 
 
-class Row  implements iClassable {
+class Row implements iClassable {
 
     private $raw_html;
     private $columns = array();

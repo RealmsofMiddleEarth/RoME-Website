@@ -6,6 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
+session_start();
 include_once $_SERVER['DOCUMENT_ROOT'] . "/../backend/objects/display/__ALL__.php";
 
 
@@ -22,16 +23,16 @@ $content = <<<CONTENT
 <div class="row">
     <div class="col-3 no-mobile"></div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 form-fillout">
-        <div><input required type="text" maxlength="32" name="fname" placeholder="First Name" /><input required type="text" maxlength="32" name="lname" placeholder="Last Name" /></div>
-        <div><input required type="number" name="character_age" placeholder="Age" /></div>
+        <div><input required type="text" maxlength="32" name="fname" placeholder="Character's First Name" /><input required type="text" maxlength="32" name="lname" placeholder="Character's Last Name" /></div>
+        <div><input required type="number" name="character_age" placeholder="Character's Age" /></div>
         <div><input required type="text" maxlength="320" name="email" placeholder="Email" /><input required type="text" maxlength="320" name="confirmemail" placeholder="Confirm Email" /></div>
         <div><input required type="password" minlength="6" name="password" placeholder="Password" /><input required type="password" minlength="6" name="confirmpassword" placeholder="Confirm Password" /></div>
-        <div>OOC Date of Birth: <input required type="date" name="dob" /></div>
+        <div>IRL Date of Birth: <input required type="date" name="dob" /></div>
         <div>
             Gender:<br />
-            <input required id="rb0" type="radio" name="gender" value="male">Male
-            <input required id="rb1" type="radio" name="gender" value="female">Female
-            <input required id="rb2" type="radio" name="gender" value="fluid">Genderfluid
+            <input required type="radio" name="gender" value="male">Male
+            <input required type="radio" name="gender" value="female">Female
+            <input required type="radio" name="gender" value="genderfluid">Genderfluid
         </div>
         <div>
             Race:<br />
@@ -60,7 +61,7 @@ $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
 <div class="banner banner-red">
-    <img src="https://picsum.photos/200?random" />
+    <img src="/static/images/seals/dwarf_500.png" />
     <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
 </div>
 CONTENT;
@@ -72,7 +73,7 @@ $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
 <div class="banner banner-purple">
-    <img src="https://picsum.photos/200?random" />
+    <img src="/static/images/seals/dwarf_500.png" />
     <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
 </div>
 CONTENT;
@@ -84,7 +85,7 @@ $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
 <div class="banner banner-green">
-    <img src="https://picsum.photos/200?random" />
+    <img src="/static/images/seals/dwarf_500.png" />
     <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
 </div>
 CONTENT;
@@ -96,7 +97,7 @@ $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
 <div class="banner banner-yellow">
-    <img src="https://picsum.photos/200?random" />
+    <img src="/static/images/seals/dwarf_500.png" />
     <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
 </div>
 CONTENT;

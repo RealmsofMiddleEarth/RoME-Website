@@ -1,7 +1,8 @@
 function create_character_user(form) {    
     let formdata = new FormData(form);
+    let redirect = true;
     $.ajax({
-        url: "https://api.rome.callumb.co.uk/user/create_user.php",
+        url: "https://api.realmsofmiddle-earth.com/user/create_user.php",
         data: formdata,
         method: "POST",
         processData: false,
@@ -9,12 +10,13 @@ function create_character_user(form) {
         success: function(result) {
             let json = $.parseJSON(result);
             console.log(json);
-            if (json.error) {
+            if (json.error != null) {
                 alert(json.error);
+                redirect = false;
                 return false;
             }
             $.ajax({
-                url: "https://api.rome.callumb.co.uk/user/create_character.php",
+                url: "https://api.realmsofmiddle-earth.com/user/create_character.php",
                 data: formdata,
                 method: "POST",
                 processData: false,
@@ -22,23 +24,26 @@ function create_character_user(form) {
                 success: function(result) {
                     let json = $.parseJSON(result);
                     console.log(json);
-                    if (json.error) {
+                    if (json.error != null) {
                         alert(json.error);
+                        redirect = false;
                         return false;
+                    }
+                    else {
+                        alert("Account created successfully!");
+                        $(location).attr('href', '/main');
                     }
                 }
             });
         }
     });
-    alert("Account created successfully!");
-    $(location).attr('href', '/main');
 }
 
 
 function create_character(form) {
     let formdata = new FormData(form);
     $.ajax({
-        url: "https://api.rome.callumb.co.uk/user/create_character.php",
+        url: "https://api.realmsofmiddle-earth.com/user/create_character.php",
         data: formdata,
         method: "POST",
         processData: false,
@@ -58,7 +63,7 @@ function create_character(form) {
 function create_user(form) {
     let formdata = new FormData(form);
     $.ajax({
-        url: "https://api.rome.callumb.co.uk/user/create_user.php",
+        url: "https://api.realmsofmiddle-earth.com/user/create_user.php",
         data: formdata,
         method: "POST",
         processData: false,
