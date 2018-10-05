@@ -10,17 +10,13 @@ class Jumbotron implements iClassable {
     private $classes = array();
     
     private $navbar = <<<NAVBAR
-<div class="branding"></div>
 <h1 class="branding"><a href="/">
     <img class="shorttext" src="/static/images/branding/short.png" alt="The logo for Realms of Middle Earth" />
     <img class="fulltext" src="/static/images/branding/full.png" alt="The logo for Realms of Middle Earth" />
 </a></h1>
-<nav class="navbar navbar-expand-lg navbar-right">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
+<span class="navbar-holder">
+    <nav class="navbar">
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/lore">Lore</a>
             </li>
@@ -28,11 +24,11 @@ class Jumbotron implements iClassable {
                 <a class="nav-link" href="/blog">Blog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/signup">Login</a>
             </li>
         </ul>
-    </div>
-</nav>\n
+    </nav>
+</span>\n
 NAVBAR;
     
     public function add_class($classname) {

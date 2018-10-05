@@ -1,0 +1,5 @@
+Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^([^.]+)$ .php [NC,L]

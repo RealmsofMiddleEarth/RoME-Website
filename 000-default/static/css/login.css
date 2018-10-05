@@ -1,3 +1,39 @@
 .form-container {
-    background: #a2a08a
+    /* background: rgba(162, 160, 138, 0.7); */
+    /* padding: 10px; */
+    margin-bottom: 10px;
+}
+
+.form-container div {
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 50%;
+}
+
+.form-container input[type="radio"] {
+    width: initial;
+    margin-right: 5px;
+}
+
+.form-container input[type="checkbox"] {
+    width: initial;
+    margin-right: 5px;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.form-fillout {
+    background: rgba(162, 160, 138, 0.7);
+    padding: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .col-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }

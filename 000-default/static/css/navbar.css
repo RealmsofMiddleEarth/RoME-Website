@@ -1,18 +1,39 @@
-div.branding {
+.navbar {
     background: rgba(var(--navbar-background-color), 0.6);
     border-bottom: solid 5px rgb(var(--navbar-text-color));
-    display: flex;
     width: 100%;
     height: 60px;
+    color: rgb(var(--navbar-text-color));
 }
 
-h1.branding {
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar * {
+    color: rgb(var(--navbar-text-color));
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.nav-item {
+    width: 100vw;
+    max-width: 5em;
+    overflow: hidden;
+    text-align: center;
+}
+
+.branding {
     display: flex;
     margin-left: 100px;
-    margin-top: -40px;
+    margin-top: 20px;
     margin-bottom: 0;
     margin-right: 0;
     max-width: 150px;
+    z-index: 100;
+    position: absolute;
 }
 
 .branding a {
@@ -33,42 +54,27 @@ h1.branding {
     display: none;
 }
 
-nav.navbar {
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(var(--navbar-text-color));
-    margin-top: -30px;
-}
-
-nav.navbar a:hover {
-    text-decoration: underline;
-}
-
-nav.navbar ul {
-    margin-left: auto !important;
-    margin-right: 0 !important;
-}
-
-nav.navbar * {
-    color: rgb(var(--navbar-text-color));
+.navbar-holder {
+    width: 100%;
+    position: inherit;
 }
 
 @media screen and (max-width: 992px) {
-    div.branding {
-        display: none;
-    }
 
-    h1.branding {
+    .branding {
         margin-left: 0;
         margin-top: 0;
         width: 100%;
         max-width: none;
         justify-content: center;
         text-align: center;
+        position: static;
+        border-bottom: solid 5px rgb(var(--navbar-text-color))
     }
 
     .branding a {
         background: rgba(var(--navbar-background-color), 0.6);
-        padding: 10px;
+        border: none;
         border-radius: 0;
         padding: 15px;
     }
@@ -81,13 +87,21 @@ nav.navbar * {
         display: block;
     }
 
-    nav.navbar {
+    .navbar {
         text-align: center;
-        flex-direction: column;
         margin-top: 0;
+        border-bottom: 0;
+        background: rgba(var(--navbar-background-color), 1);
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
     }
 
-    nav.navbar ul {
+    .navbar ul {
         box-shadow: 0;
+    }
+
+    body {
+        margin-bottom: 60px; /* Navbar height */
     }
 }
