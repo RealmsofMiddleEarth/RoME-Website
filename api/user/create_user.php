@@ -51,11 +51,16 @@ if ($cookies === false) {
 // Store new user WEW
 $database = get_database();
 $statement = $database->prepare("INSERT INTO user_logins (email, password, date_of_birth) VALUES (:email, :password, :dob);");
-$statement->execute([
-    ":email" => $email,
-    ":password" => password_hash($password, PASSWORD_DEFAULT),
-    ":dob" => $dob
-]);
+try {
+    $statement->execute([
+        ":email" => $email,
+        ":password" => password_hash($password, PASSWORD_DEFAULT),
+        ":dob" => $dob
+    ]);
+}
+catch (PDOException $e) {
+    new DeathError($e->getMessage());
+}
 die(json_encode([
     "error" => null
 ]));

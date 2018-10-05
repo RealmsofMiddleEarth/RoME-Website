@@ -25,7 +25,12 @@ else { new DeathError("Gender not set."); }
 
 $database = get_database();
 $statement = $database->prepare("INSERT INTO characters (email, forename, surname, age, gender, race) VALUES (?, ?, ?, ?, ?, ?);");
-$statement->execute([$email, $first_name, $last_name, $age, $gender, $race]);
+try {
+    $statement->execute([$email, $first_name, $last_name, $age, $gender, $race]);
+}
+catch (PDOException $e) {
+    new DeathError($e->getMessage());
+}
 die(json_encode([
     "error" => null
 ]));

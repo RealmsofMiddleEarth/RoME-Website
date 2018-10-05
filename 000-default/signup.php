@@ -33,18 +33,17 @@ $content = <<<CONTENT
             <input required id="rb1" type="radio" name="gender" value="female">Female
             <input required id="rb2" type="radio" name="gender" value="fluid">Genderfluid
         </div>
+        <div>
+            Race:<br />
+            <input required type="radio" name="race" value="hobbit" />Hobbit
+            <input required type="radio" name="race" value="elf" />Elf
+            <input required type="radio" name="race" value="dwarf" />Dwarf
+            <input required type="radio" name="race" value="human" />Human
+        </div>
         <div><input required type="checkbox" name="terms" />I agree to the terms and conditions</div>
         <div><input required type="checkbox" name="privacy" />I agree to the privacy policy</div>
         <div><input required type="checkbox" name="cookies" />I agree to the cookies policy</div>
-        <div>
-            Start your adventure:<br />
-            <span>
-                <input name="race" type="submit" value="hobbit" />
-                <input name="race" type="submit" value="elf" />
-                <input name="race" type="submit" value="dwarf" />
-                <input name="race" type="submit" value="human" />
-            </span>
-        </div>
+        <div>Start your adventure: <input type="submit" value="Create Character" /></div>
     </div>
     <div class="col-3 no-mobile"></div>
 </div>
