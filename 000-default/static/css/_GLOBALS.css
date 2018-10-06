@@ -1,6 +1,9 @@
 :root {
     --navbar-background-color: 101, 109, 15;
     --navbar-text-color: 255, 255, 255;
+    
+    --rome-green: #687211
+    --rome-gold: #F7C149
 }
 
 * {

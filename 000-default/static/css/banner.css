@@ -36,18 +36,18 @@
     right: 0;
 }
 
-.banner-red { background: rgba(255, 0, 0, 0.4)}
-.banner-red:after { border-color: rgba(255, 0, 0, 0.4) transparent transparent rgba(255, 0, 0, 0.4)}
-.banner-red:before { border-color: rgba(255, 0, 0, 0.4) rgba(255, 0, 0, 0.4) transparent transparent}
+.banner-red { background: rgba(255, 53, 53, 0.4)}
+.banner-red:after { border-color: rgba(255, 53, 53, 0.4) transparent transparent rgba(255, 53, 53, 0.4)}
+.banner-red:before { border-color: rgba(255, 53, 53, 0.4) rgba(255, 53, 53, 0.4) transparent transparent}
 
 .banner-purple { background: rgba(182, 102, 210, 0.4)}
 .banner-purple:after { border-color: rgba(182, 102, 210, 0.4) transparent transparent rgba(182, 102, 210, 0.4)}
 .banner-purple:before { border-color: rgba(182, 102, 210, 0.4) rgba(182, 102, 210, 0.4) transparent transparent}
 
-.banner-green { background: rgba(82, 158, 52, 0.4)}
-.banner-green:after { border-color: rgba(82, 158, 52, 0.4) transparent transparent rgba(82, 158, 52, 0.4)}
-.banner-green:before { border-color: rgba(82, 158, 52, 0.4) rgba(82, 158, 52, 0.4) transparent transparent}
+.banner-green { background: rgba(0, 128, 0, 0.4)}
+.banner-green:after { border-color: rgba(0, 128, 0, 0.4) transparent transparent rgba(0, 128, 0, 0.4)}
+.banner-green:before { border-color: rgba(0, 128, 0, 0.4) rgba(0, 128, 0, 0.4) transparent transparent}
 
-.banner-yellow { background: rgba(255, 255, 0, 0.4)}
-.banner-yellow:after { border-color: rgba(255, 255, 0, 0.4) transparent transparent rgba(255, 255, 0, 0.4)}
-.banner-yellow:before { border-color: rgba(255, 255, 0, 0.4) rgba(255, 255, 0, 0.4) transparent transparent}
+.banner-yellow { background: rgba(255, 215, 0, 0.4)}
+.banner-yellow:after { border-color: rgba(255, 215, 0, 0.4) transparent transparent rgba(255, 215, 0, 0.4)}
+.banner-yellow:before { border-color: rgba(255, 215, 0, 0.4) rgba(255, 215, 0, 0.4) transparent transparent}
