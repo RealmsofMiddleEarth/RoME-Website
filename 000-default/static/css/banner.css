@@ -16,6 +16,11 @@
     border: 2px solid white;
 }
 
+.banner ul {
+    padding: 0;
+    list-style: none;
+}
+
 .banner:after,
 .banner:before {
     display: block;

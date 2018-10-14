@@ -60,21 +60,34 @@ $container = new Container();
 $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
-<div class="banner banner-red">
+<div class="banner banner-yellow">
     <img src="/static/images/seals/dwarf_500.png" />
-    <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
+    <p>Silver, gold, and bronze</p>
+    <p>Dwarves are much like the stones from which they were carved. They are unyieldingly stubborn and crafty as the side of the mountains in which they live. But they are also persistent and dedicated to the causes in which they firmly believe. They are considered honorable, with unwavering strength despite their small stature.</p>
+    <ul>
+        <li><b>Attributes:</b></li>
+        <li>Fidelity</li>
+        <li>Honesty</li>
+        <li>Loyalty</li>
+    </ul>
 </div>
 CONTENT;
 $col->set_content($content);
 $row->add_column($col);
 
-// Purple banner
 $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
-<div class="banner banner-purple">
-    <img src="/static/images/seals/dwarf_500.png" />
-    <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
+<div class="banner banner-red">
+    <img src="https://picsum.photos/500/500?image=1" />
+    <p>Red, brown, and tan</p>
+    <p>Men are the most diverse of all races, having the ability to live in the harshest of conditions and still battle til their wit’s end. Normally seen as farmers or soldiers, Men are brave and steadfast beings. They are known to be hard-working and possess a valiant nature which is proven in battle but carries into daily life.</p>
+    <ul>
+        <li><b>Attributes:</b></li>
+        <li>Confidence</li>
+        <li>Justice</li>
+        <li>Patience</li>
+    </ul>
 </div>
 CONTENT;
 $col->set_content($content);
@@ -84,9 +97,16 @@ $row->add_column($col);
 $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
-<div class="banner banner-green">
-    <img src="/static/images/seals/dwarf_500.png" />
-    <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
+<div class="banner banner-purple">
+    <img src="/static/images/seals/elf_500.png" />
+    <p>Purple, silver, and white</p>
+    <p>Elves are immortal beings and carry with them the wisdom of the ages. They are fair and calm in demeanor, tending to spend their days basking in the knowledge and comforts of their own realms. Let not their beauty and prominence deny, however, that these graceful beings will defend what they believe in and hold dear.</p>
+    <ul>
+        <li><b>Attributes:</b></li>
+        <li>Charity</li>
+        <li>Patience</li>
+        <li>Wisdom</li>
+    </ul>
 </div>
 CONTENT;
 $col->set_content($content);
@@ -96,9 +116,16 @@ $row->add_column($col);
 $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
-<div class="banner banner-yellow">
-    <img src="/static/images/seals/dwarf_500.png" />
-    <p>Lorem ipsum etc I don't know what to type here and I don't really want to tab out so I'll just type until it feels like a goodf enough width WEW</p>
+<div class="banner banner-green">
+    <img src="https://picsum.photos/500/500?image=10" />
+    <p>Green, teal, light blue</p>
+    <p>Hobbits are remarkable creatures. What they lack in stature, they make up for in resilience and spirit. They typically remain within the safety of the Shire, but curiosity beckons them beyond the borders to seek adventure. Relations are important to them (almost as important as food), and they have an unparalleled urge to help those in need.</p>
+    <ul>
+        <li><b>Attributes:</b></li>
+        <li>Empathy</li>
+        <li>Honesty</li>
+        <li>Idealism</li>
+    </ul>
 </div>
 CONTENT;
 $col->set_content($content);
