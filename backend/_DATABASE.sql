@@ -21,7 +21,15 @@ CREATE TABLE characters (
     power SMALLINT NOT NULL DEFAULT 0,
     will SMALLINT NOT NULL DEFAULT 0,
     agility INTEGER NOT NULL DEFAULT 0,
+    avatar VARCHAR(50),
     PRIMARY KEY (email, forename, surname),
     FOREIGN KEY (email) REFERENCES user_logins(email)
 );
+-- email - the email they signed up with 
+-- forename/surname - the name they're using for their character 
+-- age - the age of their character 
+-- gender - the gender of their character 
+-- race - the race of their character 
+-- power/will/agility - the stats of their character 
+-- avatar - the url of the character's avatar
 

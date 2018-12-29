@@ -23,7 +23,10 @@ class Jumbotron implements iClassable {
             <a class="nav-link" href="/blog">Blog</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/signup">Login</a>
+            <a class="nav-link" href="/signup">Signup</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
         </li>
     </ul>
 </nav>\n
