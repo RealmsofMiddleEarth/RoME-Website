@@ -79,7 +79,7 @@ $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
 <div class="banner banner-red">
-    <img src="https://picsum.photos/500/500?image=1" />
+    <img src="/static/images/seals/human_500.png" />
     <p>Red, brown, and tan</p>
     <p>Men are the most diverse of all races, having the ability to live in the harshest of conditions and still battle til their wit’s end. Normally seen as farmers or soldiers, Men are brave and steadfast beings. They are known to be hard-working and possess a valiant nature which is proven in battle but carries into daily life.</p>
     <ul>
@@ -117,7 +117,7 @@ $col = new Column();
 $col->add_class("flex-hcenter");
 $content = <<<CONTENT
 <div class="banner banner-green">
-    <img src="https://picsum.photos/500/500?image=10" />
+    <img src="/static/images/seals/hobbit_500.png" />
     <p>Green, teal, light blue</p>
     <p>Hobbits are remarkable creatures. What they lack in stature, they make up for in resilience and spirit. They typically remain within the safety of the Shire, but curiosity beckons them beyond the borders to seek adventure. Relations are important to them (almost as important as food), and they have an unparalleled urge to help those in need.</p>
     <ul>
