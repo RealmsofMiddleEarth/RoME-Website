@@ -5,9 +5,9 @@ class Head implements iDisplayable {
 
     private $title = "RoME";
     private $css_files = array(
-        "/static/css/_GLOBALS.css",
-        "/static/css/navbar.css",
-        "/static/css/jumbotron.css"
+        "/css/_GLOBALS.css",
+        "/css/navbar.css",
+        "/css/jumbotron.css"
     );
     private $js_files = array();
     
@@ -22,7 +22,7 @@ class Head implements iDisplayable {
 
     public function add_css_file($filename, $include_static=TRUE) {
         if ($include_static === TRUE) {
-            array_push($this->css_files, "/static/css/$filename.css");
+            array_push($this->css_files, "/css/$filename.css");
         }
         else {
             array_push($this->css_files, $filename);
@@ -31,7 +31,7 @@ class Head implements iDisplayable {
 
     public function add_js_file($filename, $include_static=TRUE) {
         if ($include_static === TRUE) {
-            array_push($this->js_files, "/static/js/$filename.js");
+            array_push($this->js_files, "/js/$filename.js");
         }
         else {
             array_push($this->js_files, $filename);
@@ -46,7 +46,7 @@ class Head implements iDisplayable {
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>$this->title</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/static/images/branding/icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.realmsofmiddle-earth.com/images/branding/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
@@ -57,11 +57,11 @@ class Head implements iDisplayable {
 HEAD_A;
         $b = "";
         foreach ($this->css_files as $filepath) {
-            $b .= "\t<link rel=\"stylesheet\" type=\"text/css\" href=\"$filepath\" />\n";
+            $b .= "\t<link rel=\"stylesheet\" type=\"text/css\" href=\"https://static.realmsofmiddle-earth.com{$filepath}\" />\n";
         }
         $c = "";
         foreach ($this->js_files as $filepath) {
-            $c .= "\t<script src=\"$filepath\"></script>\n";
+            $c .= "\t<script src=\"https://static.realmsofmiddle-earth.com{$filepath}\"></script>\n";
         }
         return $a . $b . $c . "</head>\n<body>\n\n";
     }

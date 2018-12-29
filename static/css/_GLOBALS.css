@@ -14,12 +14,12 @@ body {
     background: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
-      ), url(/static/images/background.png) no-repeat center center fixed;
+      ), url(https://static.realmsofmiddle-earth.com/images/background.png) no-repeat center center fixed;
     background-size: cover;
 }
 
 .custom-hr {
-    background-image: url(/static/images/branding/divider_cropped.png);
+    background-image: url(https://static.realmsofmiddle-earth.com/images/branding/divider_cropped.png);
     border: 0;
     border-radius: 0;
     background-size: contain;
@@ -29,7 +29,7 @@ body {
 }
 
 .custom-hr.middle {
-    background-image: url(/static/images/branding/middle_divider.png);
+    background-image: url(https://static.realmsofmiddle-earth.com/images/branding/middle_divider.png);
     height: 60px;
 }
 

@@ -2,10 +2,9 @@
 
 
 class DeathError {
-    public $error;
-    function __construct($error) {
-        $this->error = $error;
-        die(json_encode($this));
+    function __construct($redirect, $error) {
+        $_SESSION['error'] = $error;
+        header("Location: https://realmsofmiddle-earth.com{$redirect}");
     }
 }
 

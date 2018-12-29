@@ -14,6 +14,21 @@ class Character {
     public $agility;
     public $avatar;
 
+
+    public function __construct($email, $forename, $surname, $age, $gender, $race, $power, $will, $agility, $avatar) {
+        $this->email = $email;
+        $this->forename = $forename;
+        $this->surname = $surname;
+        $this->age = $age;
+        $this->gender = $gender;
+        $this->race = $race;
+        $this->power = $power;
+        $this->will = $will;
+        $this->agility = $agility;
+        $this->avatar = $avatar;
+    }
+
+
     public function get_avatar_url() {
         if (isset($this->avatar)) {
             return "https://images.realmsofmiddle-earth/{$this->avatar}";

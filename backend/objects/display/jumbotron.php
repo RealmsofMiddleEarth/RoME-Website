@@ -11,8 +11,8 @@ class Jumbotron implements iClassable {
     
     private $navbar = <<<NAVBAR
 <h1 class="branding"><a href="/">
-    <img class="shorttext" src="/static/images/branding/short.png" alt="The logo for Realms of Middle Earth" />
-    <img class="fulltext" src="/static/images/branding/full.png" alt="The logo for Realms of Middle Earth" />
+    <img class="shorttext" src="https://static.realmsofmiddle-earth.com/images/branding/short.png" alt="The logo for Realms of Middle Earth" />
+    <img class="fulltext" src="https://static.realmsofmiddle-earth.com/images/branding/full.png" alt="The logo for Realms of Middle Earth" />
 </a></h1>
 <nav class="navbar">
     <ul class="navbar-nav ml-auto">

@@ -17,7 +17,7 @@ $content = <<<CONTENT
 <h2>Welcome to</h2>
 <hr class="custom-hr flipped" />
 <!-- <h1>Realms of Middle Earth</h1> -->
-<img src="/static/images/branding/full.png" />
+<img src="https://static.realmsofmiddle-earth.com/images/branding/full.png" />
 <hr class="custom-hr middle" />
 <h2>An online text-based roleplaying site</h2>
 <hr class="custom-hr" />
