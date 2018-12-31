@@ -136,7 +136,7 @@ $container->add_row($row);
 $page->add_container($container);
 $page->add_container($form_container);
 
-$page->add_css_file("login");
+$page->add_css_file("default/login");
 $page->add_css_file("banner");
 $page->add_css_file("column");
 

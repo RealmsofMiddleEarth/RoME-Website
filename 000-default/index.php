@@ -33,7 +33,7 @@ $container = new Container();
 $container->add_row($row);
 $page->add_container($container);
 
-$page->add_css_file("index");
+$page->add_css_file("default/index");
 
 echo $page->get_output();
 
